@@ -159,6 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const isOpen = hamburger.classList.toggle("active");
 
+    hamburger.setAttribute("aria-expanded", String(isOpen));
     mobileMenu.classList.toggle("active", isOpen);
     overlay.classList.toggle("active", isOpen);
     body.classList.toggle("menu-open", isOpen);

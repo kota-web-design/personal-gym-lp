@@ -29,6 +29,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
 }
 
 body {
@@ -315,6 +316,7 @@ transform:rotate(-45deg);
 .hero-content {
   position: relative;
   z-index: 2;
+  width: 100%;
   max-width: 900px;
 }
 
@@ -1197,13 +1199,26 @@ flex-direction: column;
   background-position: 70% center;
 }
 
+.hero-content {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.hero-kicker {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+}
+
 .hero-content h1 {
   line-height: 1.15;
-  font-size: clamp(2.2rem, 8vw, 3rem);
+  font-size: clamp(2rem, 8.5vw, 2.6rem);
+  overflow-wrap: normal;
+  word-break: keep-all;
 }
 
 .sub-text {
   margin-bottom: 50px;
+  padding: 0 8px;
 }
 
  
@@ -1215,16 +1230,22 @@ flex-direction: column;
   .hero-stats {
     flex-direction: column;
     gap: 25px;
-    margin-top: 40px;
+    width: min(100%, 350px);
+    margin: 40px auto 0;
   }
 
 
   .btn-primary {
-  width: 100%;
+  width: min(100%, 350px);
   text-align: center;
   font-size: 1rem;
-   padding: 16px 30px;
+  padding: 16px 22px;
 }
+
+  .hero-stats div {
+    width: 100%;
+    padding: 16px 20px;
+  }
 
 /* =====================================
    REASON - SP 改善
